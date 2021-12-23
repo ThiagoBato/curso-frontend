@@ -11,3 +11,7 @@ Informação de alteração
 -   git commit -m 'mensagem'
 -   git push (envia alterações para o repositório)
 -   git pull (baixa alterações do repositório)
+
+-   git flow init
+-   git flow feature start 'nome da branch'
+-   git flow feature finsh 'nome da branch'
