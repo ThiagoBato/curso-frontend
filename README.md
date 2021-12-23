@@ -28,3 +28,5 @@ São ramificações /versões paralelas
 
 -   git fetch -all (busca se existem arquivos diferentes no servidor)
 -   git merge 'nome da branch'
+
+-   git flow init configura o fluxo de branchs
