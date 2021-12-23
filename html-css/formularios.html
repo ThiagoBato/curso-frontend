@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Front-End Developer - Thiago Oliveira Bato</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/reset-meyer.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/formularios.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <a class="logo" href="./modulo-08-exercicio.html">Thiago Bato</a>
+                <nav>
+                    <ul>
+                        <li><a href="./modulo-08-exercicio.html">Introdução</a></li>
+                        <li><a href="./tabelas.html">Tabelas</a></li>
+                        <li><a href="./layouts.html">Layouts</a></li>
+                        <li><a href="./formularios.html">Formulários</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //Header -->
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <h2>Formulários</h2>
+                <article class="formulario-container">
+                    <p>Preencha os campos abaixo</p>
+
+                    <form method="post">
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+                        </div>
+						<div>
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Digite seu email" />
+                        </div>
+						<div>
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" rows="5"></textarea>
+                        </div>
+						<div class="form-prefere">
+                            <p>Qual linguagem você prefere?</p>
+								<label for="prefereHTML"><input type="radio" name="linguagens" value="html" id="prefereHTML" /> HTML</label>
+                                <label for="prefereCSS"><input type="radio" name="linguagens" value="css" id="prefereCSS" /> CSS</label>
+								<label for="prefereJavaScript"><input type="radio" name="linguagens" value="javascript" id="prefereJavaScript" /> JavaScript</label>
+                            </p>
+                        </div>
+						<div class="form-sabe">
+                            <p>Quais linguagens você sabe?</p>
+                            <label for="sabeHTML"><input type="checkbox" name="linguagens" value="html" id="sabeHTML" /> HTML</label>
+                            <label for="sabeCSS"><input type="checkbox" name="linguagens" value="css" id="sabeCSS" /> CSS</label>
+                            <label for="sabeJavaScript"><input type="checkbox" name="linguagens" value="javascript" id="sabeJavaScript" /> JavaScript</label>
+                        </div>
+
+                        <div>
+                            <label>Qual a sua cor favorita?</label>
+                            <select>
+                                <option value="Azul">Azul</option>
+                                <option value="Verde">Verde</option>
+                                <option value="Vermelho" selected>Vermelho</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input class="botao" type="submit" />
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </main>
+        <!-- //Main -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Entre em contato e saiba como transformar o seu site em algo que vai cativar os seus clientes!</p>
+                <ul>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=55054991368198"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:thiago.ov@hotmail.com"><i class="fas fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/thiago.bato"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/thiagobato/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- //Footer -->
+
+        <!-- JS -->
+        <script src="https://kit.fontawesome.com/844bcdc03e.js" crossorigin="anonymous"></script>
+    </body>
+</html>

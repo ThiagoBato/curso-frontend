@@ -1,0 +1,60 @@
+p {
+    text-align: center;
+    font-size: 1rem;
+}
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+form p {
+    text-align: left;
+}
+form label {
+    display: block;
+}
+form input,
+form textarea,
+form select {
+    max-width: calc(100% - 20px);
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 10px #00000025;
+    padding: 10px;
+    margin: 10px auto 20px;
+}
+form input[type='radio'],
+form input[type='checkbox'] {
+    width: auto;
+    box-shadow: none;
+}
+form textarea {
+    resize: vertical;
+}
+.form-prefere label,
+.form-sabe label {
+    display: inline-block;
+    margin: 0 auto 20px;
+}
+.form-prefere label + label,
+.form-sabe label + label {
+    margin: 0 0 20px 20px;
+}
+form .botao {
+    color: #000;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 0 10px #00000030;
+    transition: ease-out 0.5s;
+}
+form .botao:hover {
+    color: #fff;
+    background-color: #500f63;
+}
+@media screen and (min-width: 1024px) {
+    form {
+        margin: 50px auto;
+    }
+    form .botao {
+        margin: 30px auto 0;
+    }
+}
