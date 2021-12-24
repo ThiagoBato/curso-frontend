@@ -12,6 +12,7 @@ body {
 }
 .container {
     width: 100%;
+    box-sizing: border-box;
     display: block;
     float: left;
     padding: 20px;
@@ -64,6 +65,7 @@ ol li {
     color: #454545;
     font-size: 1.4rem;
 }
+img { max-width: 100%;}
 section {
     width: 100%;
     font-size: 1.5rem;
@@ -98,6 +100,13 @@ section article {
     display: block;
     float: left;
 }
+/*-- Cog Form --*/
+#tenho-interesse .cog-branding__powered,
+#tenho-interesse .cog-abuse {
+    display: none !important;
+}
+/*-- //Cog Form --*/
+/*-- Footer --*
 footer {
     width: 100%;
     background-color: #254159;
@@ -113,3 +122,4 @@ footer small {
     font-size: 80%;
     display: block;
 }
+/*-- //Footer --*
