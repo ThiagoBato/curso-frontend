@@ -7,3 +7,10 @@
 -   Post para redes sociais: texto + foto + url curta
 -   Incluir hospedagem (servidor web)
 -   Git - histórico de evolução (commits detalhados)
+
+## URL
+
+-   Página criada no servidor web: https://app.infinityfree.net/
+    http://prontocloud.rf.gd/
+-   Criar URL amigável para compartilhamento: https://bityli.com/
+    https://bityli.com/DXpMNE4
