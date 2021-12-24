@@ -14,3 +14,4 @@
     http://prontocloud.rf.gd/
 -   Criar URL amigável para compartilhamento: https://bityli.com/
     https://bityli.com/DXpMNE4
+-   Testar o formulário criado com cognito, utilizando o putsmail.com
