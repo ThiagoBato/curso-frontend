@@ -117,9 +117,13 @@ section article {
     width: 100%;
     background-color: #b8c8d6;
 }
+#tenho-interesse article {
+    float: right;
+}
 /*-- Cog Form --*/
 #tenho-interesse .cog-cognito {
     margin: 20px 0;
+    max-width: 600px;
 }
 #tenho-interesse form,
 .cognito.c-med .c-forms-form,
@@ -137,6 +141,10 @@ section article {
 #tenho-interesse .cog-abuse,
 #tenho-interesse .cog-branding.cog-branding--minimal {
     display: none !important;
+}
+#tenho-interesse html .cog-col--12,
+:root:root:root:root:root .cog-col--12 {
+    width: 100% !important;
 }
 /*-- //Cog Form --*/
 /*-- //Tenho Interesse --*/
