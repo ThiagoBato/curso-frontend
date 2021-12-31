@@ -1,0 +1,15 @@
+.modal-content {
+    background-color: $preto-3;
+    text-align: center;
+}
+.modal-header {
+    justify-content: center;
+    border: none;
+}
+.modal-content table th,
+.modal-content table td {
+    color: $branco !important;
+}
+.modal-footer {
+    border: none;
+}

@@ -1,0 +1,15 @@
+.card {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-body {
+    background-color: $cinza-2;
+}
+.card-body p {
+    margin: 0 auto;
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
+}
