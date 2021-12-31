@@ -1,0 +1,66 @@
+body {
+    color: #fff;
+    background-color: #212529;
+    font-family: 'Lato', sans-serif;
+}
+h1,
+h2 {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 2rem;
+}
+
+/*-- Header --*/
+#header .navbar-brand {
+    color: #fff;
+    font-size: 1.75rem;
+}
+#header .navbar-expand-lg {
+    align-content: center;
+}
+#header .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+    margin: 10px;
+}
+/*-- //Header --*/
+/*-- Main -- */
+#banner .carousel-control-prev-icon,
+#banner .carousel-control-next-icon {
+    background: none;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-body {
+    background-color: #000;
+}
+.card-body p {
+    margin: 0 auto;
+}
+.card-body p:last-of-type {
+    margin-bottom: 20px;
+}
+.btn {
+    border-color: #fff;
+}
+form label {
+    color: #fff;
+}
+/*-- Modal --*/
+.modal-content {
+    background-color: #212529;
+    text-align: center;
+}
+.modal-header {
+    justify-content: center;
+    border: none;
+}
+.modal-content table th,
+.modal-content table td {
+    color: #fff !important;
+}
+.modal-footer {
+    border: none;
+}
