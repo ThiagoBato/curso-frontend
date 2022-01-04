@@ -434,6 +434,10 @@ a {
     border: none;
 }
 
+.invalido {
+    border-color: #ff0000;
+}
+
 /* Responsive Style */
 @media (max-width: 991px) {
     .banner {

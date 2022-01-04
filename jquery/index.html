@@ -23,13 +23,13 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produtos.html">Produtos</a>
+                            <a class="nav-link" href="">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre.html">Sobre nós</a>
+                            <a class="nav-link nav-modal-open" href="sobre.html" rel="sobre">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contato.html">Contato</a>
+                            <a class="nav-link nav-modal-open" href="contato.html" rel="contato">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -65,55 +65,55 @@
                                 <img src="assets/img/item-01.jpg" alt="Item 1" />
                                 <h4>Produto 1</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-02.jpg" alt="Item 2" />
                                 <h4>Produto 2</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-03.jpg" alt="Item 3" />
                                 <h4>Produto 3</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-04.jpg" alt="Item 4" />
                                 <h4>Produto 4</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-05.jpg" alt="Item 5" />
                                 <h4>Produto 5</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-06.jpg" alt="Item 6" />
                                 <h4>Produto 6</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-04.jpg" alt="Item 7" />
                                 <h4>Produto 7</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-05.jpg" alt="Item 8" />
                                 <h4>Produto 8</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                             <div class="featured-item">
                                 <img src="assets/img/item-06.jpg" alt="Item 9" />
                                 <h4>Produto 9</h4>
                                 <h6>R$ 20,00</h6>
-                                <a href="single-product.html" class="btn"> Comprar </a>
+                                <a href="#" class="btn"> Comprar </a>
                             </div>
                         </div>
                     </div>
@@ -173,6 +173,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contato" class="visually-hidden">
+            <form action="post" class="form">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" aria-describedby="nomeAjuda" />
+                    <div id="nomeAjuda" class="form-text visually-hidden">Digite um nome válido</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email" aria-describedby="emailAjuda" />
+                    <div id="emailAjuda" class="form-text visually-hidden">Digite um email válido</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+        <div id="sobre" class="visually-hidden">teste</div>
 
         <script src="./assets/vendor/jquery/jquery-3.6.0.min.js"></script>
         <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>

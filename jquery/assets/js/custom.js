@@ -20,6 +20,54 @@ $(document).ready(function () {
     });
 
     /*
+     * Ouvinte de eventos .nav-modal-open
+     */
+    $('.nav-modal-open').on('click', function (e) {
+        e.preventDefault();
+        let elemento = $(this).attr('rel');
+        $('.modal-body').html($('#' + elemento).html());
+        $('.modal-header h5.modal-title').html($(this).text());
+        let myModal = new bootstrap.Modal($('#modelId'));
+        myModal.show();
+    });
+
+    //Validação do Formulário
+    function validaFormulario(elemento) {
+        if (elemento.val() == '') {
+            //console.log('o campo de ' + elemento.attr('name') + ' é obrigatório');
+            elemento.addClass('invalido');
+        } else {
+            elemento.removeClass('invalido');
+        }
+    }
+
+    $('body').on('submit', '.modal-body .form', function (e) {
+        e.preventDefault();
+
+        const inputNome = $('#nome');
+        const inputEmail = $('#email');
+
+        validaFormulario(inputNome);
+        validaFormulario(inputEmail);
+
+        if (inputNome.hasClass('invalido') || inputEmail.hasClass('invalido')) {
+            //console.log('verificar campos obrigatórios');
+            return false;
+        } else {
+            //$(this)[0].submit();
+            $(this).submit();
+            return true;
+        }
+    });
+
+    $('body').on('blur', '#nome', function () {
+        validaFormulario($(this));
+    });
+    $('body').on('blur', '#email', function () {
+        validaFormulario($(this));
+    });
+
+    /*
     $('.featured-item a').addClass('btn btn-primary');
     $('.featured-item a').removeClass('btn-primary').addClass('btn-dark');
     $('.featured-item:first h4').append(' <span class="badge bg-secondary">Novo</span>');
