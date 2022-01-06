@@ -35,8 +35,10 @@ $(document).ready(function () {
     function validaFormulario(elemento) {
         if (elemento.val() == '') {
             //console.log('o campo de ' + elemento.attr('name') + ' é obrigatório');
+            elemento.parent().find('.form-text').show();
             elemento.addClass('invalido');
         } else {
+            elemento.parent().find('.form-text').hide();
             elemento.removeClass('invalido');
         }
     }
@@ -46,25 +48,64 @@ $(document).ready(function () {
 
         const inputNome = $('#nome');
         const inputEmail = $('#email');
+        const inputData = $('#data');
+        const inputHora = $('#hora');
+        const inputCEP = $('#cep');
+        const inputCelular = $('#celular');
+        const inputCPF = $('#cpf');
 
         validaFormulario(inputNome);
         validaFormulario(inputEmail);
+        validaFormulario(inputData);
+        validaFormulario(inputHora);
+        validaFormulario(inputCEP);
+        validaFormulario(inputCelular);
+        validaFormulario(inputCPF);
 
         if (inputNome.hasClass('invalido') || inputEmail.hasClass('invalido')) {
             //console.log('verificar campos obrigatórios');
             return false;
         } else {
+            //Utilizar para não dar erro
             //$(this)[0].submit();
             $(this).submit();
             return true;
         }
     });
 
-    $('body').on('blur', '#nome', function () {
-        validaFormulario($(this));
-    });
-    $('body').on('blur', '#email', function () {
-        validaFormulario($(this));
+    //Quaando o modal do boostrap abre, ele valida o formulário
+    $('#modelId').on('shown.bs.modal', function () {
+        $(this).on('blur', '#nome', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#email', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#data', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#hora', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#cep', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#celular', function () {
+            validaFormulario($(this));
+        });
+        $(this).on('blur', '#cpf', function () {
+            validaFormulario($(this));
+        });
+
+        $(this).on('focus', '#data', function () {
+            $(this).datepicker();
+        });
+        //Jquery Mask Plugin de validação de campos
+        $('#data').mask('00/00/0000');
+        $('#hora').mask('00:00');
+        $('#cep').mask('00000-000');
+        $('#celular').mask('(00) 00000-0000');
+        $('#cpf').mask('000.000.000-00');
     });
 
     /*

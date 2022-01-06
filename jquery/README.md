@@ -34,4 +34,5 @@ $('div h4')
 
 #### Exercício
 
--   Customizar o projeto
+-   Customizar o projeto utilizando o canva.com
+-   Ajustar os links, corrigir a seção de Sobre, fazer a valicação do email via regex

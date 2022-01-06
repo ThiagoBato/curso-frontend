@@ -7,6 +7,9 @@ body {
     font-family: 'Roboto', sans-serif;
     transition: all 0.5s;
 }
+body.modal-open {
+    padding-right: 0;
+}
 p {
     margin-bottom: 0px;
     font-size: 16px;
@@ -434,10 +437,16 @@ a {
     border: none;
 }
 
-.invalido {
+.form-control {
+    border: 2px solid #ced4da;
+}
+.form-control.invalido {
     border-color: #ff0000;
 }
-
+.form-text {
+    color: #ff0000;
+    display: none;
+}
 /* Responsive Style */
 @media (max-width: 991px) {
     .banner {
