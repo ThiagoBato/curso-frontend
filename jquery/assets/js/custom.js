@@ -31,50 +31,78 @@ $(document).ready(function () {
         myModal.show();
     });
 
-    //Validação do Formulário
-    function validaFormulario(elemento) {
-        if (elemento.val() == '') {
-            //console.log('o campo de ' + elemento.attr('name') + ' é obrigatório');
-            elemento.parent().find('.form-text').show();
-            elemento.addClass('invalido');
-        } else {
-            elemento.parent().find('.form-text').hide();
-            elemento.removeClass('invalido');
-        }
-    }
-
-    $('body').on('submit', '.modal-body .form', function (e) {
-        e.preventDefault();
-
-        const inputNome = $('#nome');
-        const inputEmail = $('#email');
-        const inputData = $('#data');
-        const inputHora = $('#hora');
-        const inputCEP = $('#cep');
-        const inputCelular = $('#celular');
-        const inputCPF = $('#cpf');
-
-        validaFormulario(inputNome);
-        validaFormulario(inputEmail);
-        validaFormulario(inputData);
-        validaFormulario(inputHora);
-        validaFormulario(inputCEP);
-        validaFormulario(inputCelular);
-        validaFormulario(inputCPF);
-
-        if (inputNome.hasClass('invalido') || inputEmail.hasClass('invalido')) {
-            //console.log('verificar campos obrigatórios');
-            return false;
-        } else {
-            //Utilizar para não dar erro
-            //$(this)[0].submit();
-            $(this).submit();
-            return true;
-        }
-    });
-
-    //Quaando o modal do boostrap abre, ele valida o formulário
+    //Quando o modal do boostrap abre, ele valida o formulário
     $('#modelId').on('shown.bs.modal', function () {
+        //Validação do Formulário
+        function validaFormulario(elemento) {
+            if (elemento.val() == '') {
+                //console.log('o campo de ' + elemento.attr('name') + ' é obrigatório');
+                elemento.parent().find('.form-text').show();
+                elemento.addClass('invalido');
+            } else {
+                elemento.parent().find('.form-text').hide();
+                elemento.removeClass('invalido');
+            }
+        }
+
+        //Valida E-mail Regex
+        function validaEmail(email) {
+            var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return emailRegex.test(email);
+        }
+        //Verifica se o E-mail é valido
+        function verificaEmailValido(emailID) {
+            $(emailID).blur(function () {
+                var email = $(emailID).val();
+                if (validaEmail(email)) {
+                    $(this).parent().find('.form-text').hide();
+                    $(this).removeClass('invalido');
+                } else {
+                    $(this).parent().find('.form-text').show();
+                    $(this).addClass('invalido');
+                }
+            });
+        }
+        verificaEmailValido('#email');
+
+        //Valida Formulário
+        $('.form').on('submit', function (e) {
+            e.preventDefault();
+
+            const inputNome = $('#nome');
+            const inputEmail = $('#email');
+            const inputData = $('#data');
+            const inputHora = $('#hora');
+            const inputCEP = $('#cep');
+            const inputCelular = $('#celular');
+            const inputCPF = $('#cpf');
+
+            validaFormulario(inputNome);
+            validaFormulario(inputEmail);
+            verificaEmailValido(inputEmail);
+            validaFormulario(inputData);
+            validaFormulario(inputHora);
+            validaFormulario(inputCEP);
+            validaFormulario(inputCelular);
+            validaFormulario(inputCPF);
+
+            if (inputNome.hasClass('invalido') || inputEmail.hasClass('invalido')) {
+                //console.log('verificar campos obrigatórios');
+                return false;
+            } else {
+                if ($('#email').val() != '') {
+                    var email = $('#email').val();
+                    if (!validaEmail(email)) {
+                        return false;
+                    }
+                }
+                //Utilizar para não dar erro
+                //$(this)[0].submit();
+                $(this).submit();
+                return true;
+            }
+        });
+
         $(this).on('blur', '#nome', function () {
             validaFormulario($(this));
         });
