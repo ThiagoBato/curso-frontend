@@ -3,6 +3,7 @@ const concat = require('gulp-concat');
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const image = require('gulp-image');
 
 function tarefasCSS(cb) {
     return gulp
