@@ -1,6 +1,6 @@
 .banner {
     margin-top: 50px;
-    background-image: url('../../img/banner-bg_sm.jpg');
+    background-image: url('../img/banner-bg_sm.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 150px 0px;
@@ -29,7 +29,7 @@
 }
 @media screen and (min-width: 1024px) {
     .banner {
-        background-image: url('../../img/banner-bg_md.jpg');
+        background-image: url('../img/banner-bg_md.jpg');
     }
 }
 @media screen and (min-width: 1280px) {
@@ -39,11 +39,11 @@
 }
 @media screen and (min-width: 1400px) {
     .banner {
-        background-image: url('../../img/banner-bg_lg.jpg');
+        background-image: url('../img/banner-bg_lg.jpg');
     }
 }
 @media screen and (min-width: 1880px) {
     .banner {
-        background-image: url('../../img/banner-bg_xlg.jpg');
+        background-image: url('../img/banner-bg_xlg.jpg');
     }
 }
