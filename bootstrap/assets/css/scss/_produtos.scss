@@ -12,9 +12,12 @@
 }
 .card-body {
     background-color: $cinza-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .card-body p {
-    margin: 0 auto;
+    margin: 0;
     &:last-of-type {
         margin-bottom: 20px;
     }
