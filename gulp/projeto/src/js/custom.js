@@ -19,11 +19,6 @@ $(document).ready(function () {
         },
     });
 
-    /* Mostrar/Esconder menu no mobile */
-    $('.navbar-toggler').click(function () {
-        $('#navbarResponsive').slideToggle();
-    });
-
     /*
      * Ouvinte de eventos .nav-modal-open
      */

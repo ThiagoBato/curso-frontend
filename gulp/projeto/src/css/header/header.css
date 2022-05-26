@@ -18,7 +18,7 @@
 }
 .bg-dark {
     background-color: #fff !important;
-    /* border-bottom: 1px solid #eee;*/
+    border-bottom: 1px solid #eee;
 }
 #navbarResponsive {
     z-index: 999;
