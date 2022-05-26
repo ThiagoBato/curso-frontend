@@ -1,0 +1,16 @@
+#header .navbar-brand {
+    color: $branco;
+    font-size: 1.75rem;
+}
+#header .navbar-expand-lg {
+    align-content: center;
+}
+#header .navbar-nav .nav-link {
+    color: $branco;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.5s ease;
+    &:hover {
+        text-decoration: underline;
+    }
+}

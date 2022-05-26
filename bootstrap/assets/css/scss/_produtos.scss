@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    flex: 1 0 300px;
+    overflow: hidden;
+}
+.card-body {
+    background-color: $cinza-2;
+}
+.card-body p {
+    margin: 0 auto;
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
+}

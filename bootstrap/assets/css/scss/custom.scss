@@ -1,0 +1,31 @@
+@import '_variaveis';
+@import '_header';
+
+@import '_banner';
+@import '_produtos';
+@import '_contato';
+@import '_modal';
+@import '_custom-form';
+
+body {
+    color: $branco;
+    background-color: $preto-3;
+    font-family: $tipo-2;
+}
+h1,
+h2 {
+    font-family: $tipo-1;
+    font-size: 2rem;
+}
+
+.btn {
+    color: $branco;
+    background-color: black;
+    border-color: black;
+    transition: 0.5s ease;
+    &:hover {
+        color: $branco;
+        background-color: $preto-2;
+        border-color: $preto-2;
+    }
+}
