@@ -36,5 +36,5 @@ $('div h4')
 
 -   Customizar o projeto utilizando o canva.com
 -   Ajustar os links, corrigir a seção de Sobre, fazer a valicação do email via regex
-
+-   teste
 -   Que tal tentar colocar na validação do input de e-mail pra aceitar somente quando é email e tem o @ e .com?
