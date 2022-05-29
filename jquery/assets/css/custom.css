@@ -447,6 +447,9 @@ a {
     color: #ff0000;
     display: none;
 }
+.modal {
+    z-index: 99999;
+}
 /* Responsive Style */
 @media (max-width: 991px) {
     .banner {
@@ -513,5 +516,10 @@ a {
     .featured-page #filters {
         margin-top: 15px;
         text-align: left;
+    }
+}
+@media (max-width: 640px) {
+    .navbar .navbar-brand img {
+        max-width: 150px;
     }
 }
